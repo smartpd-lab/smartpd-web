@@ -1,14 +1,12 @@
-# SmartPD v0.2a
-Mobile-first capture workflow prototype. No PD measurement or prescription output.
+# SmartPD v0.3 — bilingual guided capture
 
-## Run locally
-From this folder: `py -m http.server 8000` then open `http://localhost:8000` on the same computer.
+Static English-first / Chinese-switchable prototype. Includes desktop QR code to the published GitHub Pages URL, phone/computer guidance, card-on-forehead illustrated instructions, front-camera preference, three-second countdown and local photo preview.
 
-## Phone test
-Host the folder on an HTTPS static site (such as GitHub Pages). Opening a desktop's `http://192.168...` address on a phone will generally not grant camera access because it is not a secure context. Use the HTTPS URL on the phone. No backend, analytics or image upload is included.
+## Deployment
+Upload all five files (`index.html`, `style.css`, `app.js`, `smartpd-qr.png`, `README.md`) to the **root** of `smartpd-lab/smartpd-web` on the `main` branch. GitHub Pages should use `main` / `(root)`.
 
-## Privacy
-Photos are held only in browser memory as temporary object URLs; do not use sensitive cards. Photos are not transmitted by the supplied code. Browser/device behavior should be tested before public launch.
+## Testing
+Open `https://smartpd-lab.github.io/smartpd-web/` on a phone, tap Start camera, allow camera access, then capture. Test language switch and QR code from a computer screen. Desktop webcams are also supported.
 
-## Roadmap
-Add demo video; automatic face/card detection; fixation protocol; calibrated optics; independent reference validation. No medical/prescription claims.
+## Important limitations
+No actual PD measurement, face detection, card detection, automated positioning validation, or demo video yet. The illustration is instructional, not a verified optical geometry reference. Arm's length and looking at a near phone do not establish distance PD. The card's forehead plane is not the pupil plane. No prescription-ready output. No image uploads or analytics are implemented in these files; verify deployment and third-party browser behavior before public testing. Avoid showing unmasked payment cards.
